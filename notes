@@ -1,0 +1,6 @@
+ python3 -m venv venv
+source venv/bin/activate
+
+pip install flask
+pip install gunicorn                    
+gunicorn -b localhost:8880 -w 4 main:app
